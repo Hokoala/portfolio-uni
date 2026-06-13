@@ -108,7 +108,7 @@ function ParallaxHero() {
 function StatsBar() {
   const stats = [
     { value: "3", label: "Années de BUT" },
-    { value: "5", label: "Compétences BUT" },
+    { value: "5", label: "Compétences" },
     { value: "6+", label: "Projets" },
     { value: "IUT", label: "Troyes" },
   ];
