@@ -110,7 +110,7 @@ function StatsBar() {
     { value: "3", label: "Années de BUT" },
     { value: "5", label: "Compétences BUT" },
     { value: "6+", label: "Projets" },
-    { value: "2026", label: "Promo diplôme" },
+    { value: "IUT", label: "Troyes" },
   ];
   return (
     <Reveal direction="up">
