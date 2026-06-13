@@ -66,8 +66,8 @@ function ParallaxHero() {
 
         <Reveal direction="up" delay={350}>
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)", color: "var(--muted)", maxWidth: "520px", lineHeight: 1.6, marginBottom: "40px" }}>
-            Trois ans de projets documentés, analysés, et mis en perspective.
-            Développeur front-end en formation, curieux du design de l&apos;expérience.
+            Je construis ce qui me manque — un SaaS médical, un outil CLI, un portfolio en 3D.
+            Étudiant BUT MMI à Troyes, je vise l&apos;ingénierie logicielle.
           </p>
         </Reveal>
 
