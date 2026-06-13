@@ -108,9 +108,9 @@ function ParallaxHero() {
 function StatsBar() {
   const stats = [
     { value: "3", label: "Années de BUT" },
-    { value: "5/5", label: "Compétences" },
+    { value: "5", label: "Compétences BUT" },
     { value: "6+", label: "Projets" },
-    { value: "S6", label: "Stage long" },
+    { value: "2026", label: "Promo diplôme" },
   ];
   return (
     <Reveal direction="up">
