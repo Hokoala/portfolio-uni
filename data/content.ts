@@ -9,7 +9,7 @@ export const projects: Project[] = [
     year: "Année 3 · 2025",
     semester: "S6",
     role: "Développeur Front-end — Stagiaire",
-    duration: "8 semaines",
+    duration: "en cours",
     competences: ["Développer", "Entreprendre", "Concevoir"],
     techs: ["React", "Tailwind CSS", "Animations 3D"],
     context: "Stage en entreprise chez Ransau Systeme, société spécialisée dans les systèmes industriels. Mission : identifier les faiblesses du site existant via un audit UX/UI, puis concevoir et développer une nouvelle version moderne et performante.",
