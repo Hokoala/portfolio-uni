@@ -51,7 +51,7 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
       }}>
 
         {/* Sticky top bar */}
-        <div style={{
+        <div className="rsp-modal-bar" style={{
           position: "sticky", top: 0,
           background: "var(--background)",
           borderBottom: "1px solid var(--border)",
@@ -85,7 +85,7 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
         </div>
 
         {/* Content */}
-        <div style={{ padding: "52px 40px 64px", flex: 1 }}>
+        <div className="rsp-modal-content" style={{ padding: "52px 40px 64px", flex: 1 }}>
 
           {/* Title block */}
           <h2 style={{
@@ -134,7 +134,7 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
           </div>
 
           {/* 3-col content */}
-          <div style={{
+          <div className="rsp-modal-3col" style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "28px",
@@ -197,6 +197,7 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
               {project.sections.map((section, i) => (
                 <div
                   key={i}
+                  className={section.image ? "rsp-modal-2col" : ""}
                   style={{
                     display: "grid",
                     gridTemplateColumns: section.image ? "1fr 1fr" : "1fr",

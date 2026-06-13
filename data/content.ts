@@ -198,7 +198,7 @@ export const projects: Project[] = [
     context: "Projet personnel pour se démarquer avec un format de portfolio original. Concept : remplacer le traditionnel site vitrine par une expérience interactive en 3D où le visiteur incarne un astronaute qui explore une planète-portfolio. Three.js appris en autonomie pour l'occasion.",
     analysis: "Développement sous Three.js avec JavaScript pour la logique d'interaction et le rendu 3D dans le navigateur. Conception des zones d'exploration, des triggers de découverte de projets et de l'UI superposée. Travail sur la fluidité des contrôles, les collisions et la caméra pour une expérience utilisateur fluide en 3D.",
     bilan: "Projet qui a reçu de nombreux retours positifs pour son originalité. Compétences en Three.js, rendu 3D WebGL et game design. Démontre créativité, capacité à sortir des conventions et maîtrise d'un nouvel environnement de développement.",
-    link: "/explore",
+    link: "https://jean-michel-le.dev/planet-game.html",
     images: ["portfolio-3D.png"],
     traces: [],
     sections: [

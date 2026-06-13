@@ -54,3 +54,39 @@ body {
   border-radius: 2px;
 }
 
+@media (max-width: 768px) {
+  /* Nav */
+  .rsp-nav { padding: 16px 20px !important; }
+  .rsp-nav-links { display: none !important; }
+
+  /* Sections padding */
+  .rsp-section { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* Hero */
+  .rsp-hero { padding: 0 20px 60px !important; }
+
+  /* Stats bar */
+  .rsp-stats-grid { grid-template-columns: repeat(2, 1fr) !important; margin: 0 20px !important; }
+  .rsp-stats-item { padding-left: 16px !important; }
+
+  /* Projects header */
+  .rsp-projects-header { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+  .rsp-projects-desc { text-align: left !important; max-width: 100% !important; }
+
+  /* Competences grid */
+  .rsp-comp-grid { grid-template-columns: 1fr !important; }
+  .rsp-comp-item { border-right: none !important; }
+
+  /* About grid */
+  .rsp-2col { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* Skills row */
+  .rsp-skills-row { grid-template-columns: 1fr !important; gap: 8px !important; }
+
+  /* Modal */
+  .rsp-modal-bar { padding: 14px 20px !important; }
+  .rsp-modal-content { padding: 28px 20px 48px !important; }
+  .rsp-modal-3col { grid-template-columns: 1fr !important; }
+  .rsp-modal-2col { grid-template-columns: 1fr !important; }
+}
+

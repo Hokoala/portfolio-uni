@@ -13,6 +13,7 @@ export default function Nav() {
 
   return (
     <nav
+      className="rsp-nav"
       style={{
         position: "fixed",
         top: 0,
@@ -32,7 +33,7 @@ export default function Nav() {
       <Link href="/" style={{ fontWeight: 700, fontSize: "0.9rem", letterSpacing: "0.05em", textDecoration: "none", color: "var(--foreground)" }}>
         JML
       </Link>
-      <div style={{ display: "flex", gap: "32px" }}>
+      <div className="rsp-nav-links" style={{ display: "flex", gap: "32px" }}>
         {[
           { label: "Projets", href: "#projets" },
           { label: "Compétences", href: "#competences" },

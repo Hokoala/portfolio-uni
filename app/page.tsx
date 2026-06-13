@@ -18,6 +18,7 @@ function ParallaxHero() {
   return (
     <section
       ref={ref}
+      className="rsp-hero"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -113,9 +114,9 @@ function StatsBar() {
   ];
   return (
     <Reveal direction="up">
-      <div style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", margin: "0 40px" }}>
+      <div className="rsp-stats-grid" style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", margin: "0 40px" }}>
         {stats.map((s, i) => (
-          <div key={i} style={{ padding: "28px 0", borderRight: i < stats.length - 1 ? "1px solid var(--border)" : "none", paddingLeft: i > 0 ? "32px" : "0" }}>
+          <div key={i} className={i > 0 ? "rsp-stats-item" : ""} style={{ padding: "28px 0", borderRight: i < stats.length - 1 ? "1px solid var(--border)" : "none", paddingLeft: i > 0 ? "32px" : "0" }}>
             <p style={{ fontSize: "2rem", fontWeight: 700, letterSpacing: "-0.02em" }}>{s.value}</p>
             <p style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: "4px" }}>{s.label}</p>
           </div>
@@ -127,14 +128,14 @@ function StatsBar() {
 
 function ProjectsSection() {
   return (
-    <section id="projets" style={{ padding: "100px 40px 60px" }}>
+    <section id="projets" className="rsp-section" style={{ padding: "100px 40px 60px" }}>
       <Reveal direction="left">
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "48px" }}>
+        <div className="rsp-projects-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "48px" }}>
           <div>
             <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "10px" }}>01 / Projets</p>
             <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>Les projets<br />qui m&apos;ont forgé.</h2>
           </div>
-          <p style={{ fontSize: "0.85rem", color: "var(--muted)", maxWidth: "280px", textAlign: "right", lineHeight: 1.6 }}>
+          <p className="rsp-projects-desc" style={{ fontSize: "0.85rem", color: "var(--muted)", maxWidth: "280px", textAlign: "right", lineHeight: 1.6 }}>
             Stage, projet personnel inédit, et SAE — chaque trace analysée et mise en perspective.
           </p>
         </div>
@@ -154,18 +155,19 @@ function ProjectsSection() {
 function CompetencesSection() {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <section id="competences" style={{ padding: "100px 40px 60px" }}>
+    <section id="competences" className="rsp-section" style={{ padding: "100px 40px 60px" }}>
       <Reveal direction="left">
         <div style={{ marginBottom: "48px" }}>
           <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "10px" }}>02 / Compétences</p>
           <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>Cinq compétences,<br />trois niveaux.</h2>
         </div>
       </Reveal>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0" }}>
+      <div className="rsp-comp-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0" }}>
         {competences.map((c, i) => (
           <Reveal key={c.id} direction="up" delay={i * 60}>
             <div
               onClick={() => setActive(active === c.id ? null : c.id)}
+              className="rsp-comp-item"
               style={{ borderTop: "1px solid var(--border)", borderRight: i % 2 === 0 ? "1px solid var(--border)" : "none", padding: "32px 28px", cursor: "pointer", transition: "background 0.2s", background: active === c.id ? "var(--foreground)" : "transparent", color: active === c.id ? "var(--background)" : "var(--foreground)" }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
@@ -205,12 +207,12 @@ const skillCategories = [
 
 function AboutSection() {
   return (
-    <section id="apropos" style={{ padding: "100px 40px 120px" }}>
+    <section id="apropos" className="rsp-section" style={{ padding: "100px 40px 120px" }}>
       <Reveal direction="left">
         <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "10px" }}>03 / À propos</p>
       </Reveal>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start", marginTop: "32px", marginBottom: "64px" }}>
+      <div className="rsp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start", marginTop: "32px", marginBottom: "64px" }}>
         <Reveal direction="up" delay={100}>
           <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.05 }}>
             Développeur web,<br /><span style={{ color: "var(--muted)" }}>futur ingénieur logiciel.</span>
@@ -245,6 +247,7 @@ function AboutSection() {
           {skillCategories.map((cat, i) => (
             <div
               key={cat.label}
+              className="rsp-skills-row"
               style={{
                 display: "grid",
                 gridTemplateColumns: "160px 1fr",
