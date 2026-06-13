@@ -136,7 +136,7 @@ function ProjectsSection() {
             <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>Les projets<br />qui m&apos;ont forgé.</h2>
           </div>
           <p className="rsp-projects-desc" style={{ fontSize: "0.85rem", color: "var(--muted)", maxWidth: "280px", textAlign: "right", lineHeight: 1.6 }}>
-            Stage, projet personnel inédit, et SAE — chaque trace analysée et mise en perspective.
+            Stage, SAE, projets perso — du SaaS médical à la borne d&apos;arcade, six projets qui racontent trois ans de formation.
           </p>
         </div>
       </Reveal>
