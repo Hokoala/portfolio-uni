@@ -18,6 +18,7 @@ interface Project {
   bilan: string;
   link?: string;
   images?: string[];
+  video?: string;
   traces?: { label: string; type: "image" | "link"; href?: string }[];
   sections?: { title: string; text: string; image?: string }[];
 }

@@ -6,6 +6,7 @@ import type { Project } from "./ProjectCard";
 export default function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [lightbox, setLightbox] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -22,6 +23,26 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
   if (!mounted) return null;
 
   return createPortal(
+    <>
+    {lightbox && (
+      <div
+        onClick={() => setLightbox(null)}
+        style={{
+          position: "fixed", inset: 0, zIndex: 2000,
+          background: "rgba(0,0,0,0.92)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          cursor: "zoom-out",
+          padding: "24px",
+        }}
+      >
+        <img
+          src={lightbox}
+          alt=""
+          style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", borderRadius: "2px" }}
+          onClick={e => e.stopPropagation()}
+        />
+      </div>
+    )}
     <div style={{ position: "fixed", inset: 0, zIndex: 1000, display: "flex" }}>
       {/* Backdrop */}
       <div
@@ -156,6 +177,21 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
             ))}
           </div>
 
+          {/* Video */}
+          {project.video && (
+            <div style={{ marginBottom: "44px" }}>
+              <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "16px" }}>
+                Démonstration
+              </p>
+              <video
+                src={`/video/${project.video}`}
+                controls
+                playsInline
+                style={{ width: "100%", borderRadius: "2px", background: "#f0f0ee", display: "block" }}
+              />
+            </div>
+          )}
+
           {/* Images grid */}
           {project.images && project.images.length > 0 && (
             <div style={{ marginBottom: "44px" }}>
@@ -182,7 +218,8 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
                     <img
                       src={`/images/${img}`}
                       alt={`${project.title} — visuel ${i + 1}`}
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", cursor: "zoom-in" }}
+                      onClick={() => setLightbox(`/images/${img}`)}
                       onError={(e) => { (e.currentTarget.parentElement!.style.background) = "#e8e8e6"; }}
                     />
                   </div>
@@ -217,11 +254,12 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
                     </p>
                   </div>
                   {section.image && (
-                    <div style={{ aspectRatio: "16/10", overflow: "hidden", background: "#f0f0ee", borderRadius: "2px" }}>
+                    <div style={{ overflow: "hidden", background: "#f0f0ee", borderRadius: "2px" }}>
                       <img
                         src={`/images/${section.image}`}
                         alt={section.title}
-                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                        style={{ width: "100%", height: "auto", display: "block", cursor: "zoom-in" }}
+                        onClick={() => setLightbox(`/images/${section.image!}`)}
                       />
                     </div>
                   )}
@@ -313,7 +351,8 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
           )}
         </div>
       </div>
-    </div>,
+    </div>
+    </>,
     document.body
   );
 }

@@ -17,6 +17,7 @@ export const projects: Project[] = [
     bilan: "Première expérience professionnelle complète, de l'analyse à la livraison. Compétences renforcées en relation client, en audit UX et en développement front-end sous contraintes réelles. Site mis en ligne et utilisé par l'entreprise.",
     link: "https://www.ransau-systeme.com/",
     images: ["ransau-systeme.png"],
+    video: "ransau_system_site.mov",
     traces: [
       { label: "Site mis en ligne", type: "link", href: "https://www.ransau-systeme.com/" },
     ],
@@ -82,6 +83,7 @@ export const projects: Project[] = [
     analysis: "4 commandes : devflow init (scaffolding avec templates python/node/fullstack), devflow todo (TODO list persistante), devflow snippet (sauvegarde et récupération de snippets), devflow gitlog (historique git visuel). Architecture modulaire : un cli.py comme point d'entrée, chaque commande dans son propre fichier dans commands/. Persistance via fichiers JSON dans ~/.devflow_*. Installable avec pip install -e . grâce au setup.py.",
     bilan: "Apprentissage de Python en contexte réel avec livraison d'un outil fonctionnel. Maîtrise de argparse, de la gestion de fichiers stdlib et de la conception d'API CLI. Le choix zéro-dépendance force à comprendre les mécanismes bas niveau plutôt que de s'appuyer sur des abstractions.",
     link: "https://github.com/Hokoala/devflow",
+    images: ["devflow-init.png", "devflow-todo.png", "devflow-snippet.png", "devflow-gitlog.png"],
     traces: [
       { label: "Code source — GitHub", type: "link", href: "https://github.com/Hokoala/devflow" },
     ],
@@ -170,7 +172,7 @@ export const projects: Project[] = [
       {
         title: "Authentification OAuth 2.0",
         text: "J'ai implémenté le flux Authorization Code Flow de Spotify sans librairie tierce : génération d'un state aléatoire (protection CSRF), redirect vers l'endpoint Spotify avec les scopes nécessaires (user-top-read, user-read-recently-played), récupération du code d'autorisation au retour, échange contre un access_token + refresh_token via un appel POST côté serveur (Next.js API Route pour ne pas exposer le client_secret), puis stockage chiffré des tokens dans localStorage avec gestion automatique du refresh avant expiration des 3600 secondes.",
-        image: "api-spotify.png",
+        image: "spotify.png",
       },
       {
         title: "Dashboard & visualisations",
@@ -199,7 +201,7 @@ export const projects: Project[] = [
     analysis: "Développement sous Three.js avec JavaScript pour la logique d'interaction et le rendu 3D dans le navigateur. Conception des zones d'exploration, des triggers de découverte de projets et de l'UI superposée. Travail sur la fluidité des contrôles, les collisions et la caméra pour une expérience utilisateur fluide en 3D.",
     bilan: "Projet qui a reçu de nombreux retours positifs pour son originalité. Compétences en Three.js, rendu 3D WebGL et game design. Démontre créativité, capacité à sortir des conventions et maîtrise d'un nouvel environnement de développement.",
     link: "https://jean-michel-le.dev/planet-game.html",
-    images: ["portfolio-3D.png"],
+    images: ["portfolio-3d-accueil.png", "portfolio-3d-gameplay.png", "portfolio-3d-projet.png", "portfolio-3D.png"],
     traces: [],
     sections: [
       {
