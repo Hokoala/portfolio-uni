@@ -83,6 +83,11 @@ export const projects: Project[] = [
         image: "ransau-saas-bdd-results.png",
       },
       {
+        title: "Maquette Figma — Dashboard",
+        text: "Avant de coder, chaque écran a été maquetté sur Figma. Le dashboard principal de MARTY centralise les indicateurs clés en temps réel : demandes RFI, commandes RFP, rapports d'offres, clients actifs. Il intègre aussi un assistant IA (chat GPT / DeepSeek), un module de tâches prioritaires, des statistiques annuelles et un suivi des activités récentes. Cette maquette a servi de référence commune à toute l'équipe pour aligner le design et le développement avant d'écrire la moindre ligne de code.",
+        image: "ransau-saas-dashboard-figma.png",
+      },
+      {
         title: "Composants réutilisables & architecture UI",
         text: "Le frontend est organisé autour d'un principe clair : tout composant créé doit pouvoir être réutilisé par les autres pages sans duplication de code. Le design system est centralisé dans packages/ui (monorepo Turborepo) avec Tailwind CSS et des design tokens partagés. Des composants comme les toasts (succès, avertissement, erreur) ou les tooltips sont construits une seule fois et disponibles partout dans l'application — chaque développeur de l'équipe peut les utiliser sans en connaître l'implémentation interne.",
         image: "ransau-saas-composant-toast.png",
