@@ -70,6 +70,7 @@ export const projects: Project[] = [
       {
         title: "Identité visuelle — logo & charte",
         text: "Le projet a démarré par la création de l'identité visuelle complète : naming, logo et charte graphique. Un premier logo avait été validé en équipe, mais le nom choisi était déjà utilisé sur OVH pour l'hébergement cloud — impossible de le conserver. Nous avons dû reprendre entièrement : nouveau nom, nouveau logo conçu de zéro, et refonte de la charte graphique (palette de couleurs, typographie, espacements, règles d'utilisation). Ce contretemps nous a obligés à aller plus vite sur la partie créative tout en gardant une cohérence visuelle solide.",
+        image: "ransau-saas-logo.svg",
       },
       {
         title: "Modélisation de la base de données",

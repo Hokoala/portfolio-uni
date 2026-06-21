@@ -254,7 +254,7 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
                     </p>
                   </div>
                   {section.image && (
-                    <div style={{ overflow: "hidden", background: "#f0f0ee", borderRadius: "2px" }}>
+                    <div style={{ overflow: "hidden", background: section.image.endsWith(".svg") ? "#1a1a1a" : "#f0f0ee", borderRadius: "2px", display: "flex", alignItems: "center", justifyContent: "center", padding: section.image.endsWith(".svg") ? "32px" : "0" }}>
                       <img
                         src={`/images/${section.image}`}
                         alt={section.title}
