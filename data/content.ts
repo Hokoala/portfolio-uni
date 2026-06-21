@@ -75,10 +75,17 @@ export const projects: Project[] = [
       {
         title: "Modélisation de la base de données",
         text: "La phase la plus exigeante intellectuellement. Chaque relation entre entités — projet, demande d'achat, bon de commande, fournisseur, utilisateur — a fait l'objet de débats en équipe : quelle cardinalité ? Quelle table est responsable de quelle information ? Faut-il dénormaliser pour les performances ou garder une structure stricte ? Ces arbitrages théoriques, longs mais nécessaires, ont produit un schéma robuste. Les requêtes SQL ont ensuite été écrites manuellement (pas d'ORM) pour contrôler précisément les performances, puis validées par des tests et des scripts de migration.",
+        image: "ransau-saas-bdd-test.png",
+      },
+      {
+        title: "Tests de la base de données",
+        text: "Chaque contrainte métier de la base de données a été couverte par un test SQL automatisé. Le principe : pour chaque règle (ex. paid_amount ne peut pas dépasser total_amount, un message ne peut pas être son propre parent, une conversation ne peut pas exister sans company_id), un script crée un scénario qui doit échouer si la contrainte est bien en place — et un qui doit passer. Les résultats affichent PASS ou FAIL avec le numéro du test. Cette approche garantit qu'aucune modification future ne casse silencieusement une règle métier critique.",
+        image: "ransau-saas-bdd-results.png",
       },
       {
         title: "Composants réutilisables & architecture UI",
-        text: "Le frontend est organisé autour d'un principe clair : tout composant créé doit pouvoir être réutilisé par les autres pages sans duplication de code. Le design system est centralisé dans packages/ui (monorepo Turborepo) avec Tailwind CSS et des design tokens partagés. Chaque composant — bouton, carte, formulaire, tableau — est conçu de façon autonome et documenté pour que n'importe quel développeur de l'équipe puisse l'utiliser sans creuser dans l'implémentation.",
+        text: "Le frontend est organisé autour d'un principe clair : tout composant créé doit pouvoir être réutilisé par les autres pages sans duplication de code. Le design system est centralisé dans packages/ui (monorepo Turborepo) avec Tailwind CSS et des design tokens partagés. Des composants comme les toasts (succès, avertissement, erreur) ou les tooltips sont construits une seule fois et disponibles partout dans l'application — chaque développeur de l'équipe peut les utiliser sans en connaître l'implémentation interne.",
+        image: "ransau-saas-composant-toast.png",
       },
       {
         title: "Architecture technique",
