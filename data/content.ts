@@ -28,8 +28,18 @@ export const projects: Project[] = [
         image: "ransau-systeme.png",
       },
       {
+        title: "Problème de code — page Blog",
+        text: "Lors du développement de la page Blog, j'ai rencontré un bug d'affichage : les articles ne se chargeaient pas dans le bon ordre et le layout cassait sur certaines résolutions. Le problème venait d'une gestion incorrecte des données côté composant — les articles étaient rendus avant que les données soient prêtes, ce qui provoquait un état vide puis un saut visuel. J'ai trouvé la solution en consultant des ressources techniques en ligne, en isolant le problème dans un composant de test, puis en corrigeant la gestion des états de chargement. C'est ce type de bug, invisible en local mais visible en production, qui m'a appris à toujours anticiper les états intermédiaires dans un composant React.",
+        image: "ransau-blog.png",
+      },
+      {
         title: "Solutions développées",
         text: "Refonte complète en React : architecture en composants atomiques (Button, Card, Section, Navbar) réutilisables sur toutes les pages. Tailwind CSS avec un fichier de config centralisé (couleurs, typographie, spacing) pour garantir une cohérence totale. Animations 3D via CSS transforms et perspective pour les cartes produits — CSS pur, zéro librairie, pour éviter tout impact sur les performances. Lazy loading des images, optimisation des assets, et score Lighthouse > 90 en production.",
+      },
+      {
+        title: "Organisation & suivi avec ClickUp",
+        text: "Pour structurer le travail en équipe, nous utilisions ClickUp comme outil de gestion de projet. Le principe : chaque lundi matin, une réunion courte permettait de faire le point et d'attribuer une tâche précise à chaque membre pour la semaine. Les retours du tuteur arrivaient directement sous forme de tâches dans ClickUp — questions UX à traiter, éléments à corriger, fonctionnalités à ajouter — ce qui nous permettait de travailler de façon autonome sans attendre de réunion pour avancer. Cette méthode m'a appris à travailler avec un backlog réel, à prioriser et à livrer de façon itérative.",
+        image: "ransau-clickup.png",
       },
       {
         title: "V2 — évolution en cours",
