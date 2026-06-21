@@ -172,7 +172,11 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
                 <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "12px" }}>
                   {label}
                 </p>
-                <p style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--foreground)" }}>{text}</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                  {text.split("\n\n").map((para, i) => (
+                    <p key={i} style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--foreground)" }}>{para}</p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
