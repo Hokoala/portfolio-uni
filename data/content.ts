@@ -42,6 +42,15 @@ export const projects: Project[] = [
         image: "ransau-clickup.png",
       },
       {
+        title: "Refonte du logo",
+        text: "En parallèle du développement, j'ai pris en charge la refonte complète du logo de Ransau Systeme. L'objectif était de moderniser l'identité visuelle de l'entreprise tout en conservant sa dimension industrielle et sérieuse. Nouveau logotype, typographie affinée, déclinaisons clair/sombre pour s'adapter aux différents contextes d'affichage sur le site — chaque version a été validée avec l'entreprise avant intégration.",
+      },
+      {
+        title: "Page équipe — présentation humaine & parcours",
+        text: "La page équipe était une priorité du client : mettre en avant les hommes et femmes derrière l'entreprise, pas seulement leurs titres. J'ai conçu un carousel interactif présentant chaque membre avec sa photo, son prénom, son rôle et ses domaines d'expertise (tags). La tagline « Une équipe d'ingénieurs passionnés — pluridisciplinaire, rigoureuse, tournée vers vos résultats » a été co-rédigée avec le client pour refléter l'identité de l'équipe. Chaque fiche membre inclut une courte biographie et son parcours professionnel, donnant une dimension humaine au site au-delà de la simple liste de compétences.",
+        image: "ransau-equipe.png",
+      },
+      {
         title: "V2 — évolution en cours",
         text: "Suite aux retours post-lancement V1, la V2 est en cours de développement. Elle intègre une refonte de la section produits avec un système de filtres dynamiques, une page de contact avec validation de formulaire côté client et envoi via API, et une amélioration des animations 3D avec des transitions plus fluides basées sur l'Intersection Observer API pour déclencher les effets au scroll.",
       },
