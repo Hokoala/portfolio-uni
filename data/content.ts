@@ -48,7 +48,7 @@ export const projects: Project[] = [
       {
         title: "Page équipe — présentation humaine & parcours",
         text: "La page équipe était une priorité du client : mettre en avant les hommes et femmes derrière l'entreprise, pas seulement leurs titres. J'ai conçu un carousel interactif présentant chaque membre avec sa photo, son prénom, son rôle et ses domaines d'expertise (tags). La tagline « Une équipe d'ingénieurs passionnés — pluridisciplinaire, rigoureuse, tournée vers vos résultats » a été co-rédigée avec le client pour refléter l'identité de l'équipe. Chaque fiche membre inclut une courte biographie et son parcours professionnel, donnant une dimension humaine au site au-delà de la simple liste de compétences.",
-        image: "ransau-equipe.png",
+        image: "Screenshot 2026-06-22 at 16.56.56.png",
       },
       {
         title: "V2 — évolution en cours",
